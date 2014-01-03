@@ -1,4 +1,4 @@
-<h3>Home</h3>
+<h2>Home</h2>
 <p>The purpose of this project is to test AngularJS, with the other technologies I usually use, such as :</p>
 <ul>
     <li>git</li>
@@ -10,8 +10,9 @@
     <li>yeoman</li>
     <li>bower</li>
     <li>karma</li>
+    <li>twitter bootstrap (yeah I've always prefered vanilla CSS) - also I apologize for all the unwanted markup that it needs ...</li>
 </ul>
-<h3>Summary <span>({{links.length}} links</span>)</h3>
+<h3>Summary <small>({{links.length}} links)</small></h3>
 <ul>
     <li ng-repeat="link in links"><a ng-href="#{{link.href}}">{{link.text}}</a></li>
 </ul>

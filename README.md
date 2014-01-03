@@ -11,6 +11,7 @@ And some new ones (like following the yeoman workflow) :
 * yeoman
 * bower
 * karma
+* twitter bootstrap (yeah I've always prefered vanilla CSS) - also I apologize for all the unwanted markup that it needs ...
 
 To use it you'll need :
 

@@ -1,1 +1,17 @@
-<h3>First steps</h3>
+<h2>First steps</h2>
+<h3>Simple binding</h3>
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-xs-12 col-sm-3 control-label">Type anything</label>
+        <div class="col-xs-12 col-sm-7">
+            <input class="form-control" placeholder="Enter your name or whatever" ng-model="yourNameOrWhatever" ng-init="yourNameOrWhatever = ''">
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <button type="button" class="btn btn-default" ng-click="showYourNameOrWhatever()">Show</button>
+        </div>
+        <label class="col-xs-12 col-sm-3 control-label">It goes down here</label>
+        <div class="col-xs-12 col-sm-7">
+            <p class="help-block">{{yourNameOrWhatever}}</p>
+        </div>
+    </div>
+</form>
