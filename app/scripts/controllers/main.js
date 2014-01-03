@@ -1,10 +1,9 @@
 'use strict';
 
 angular.module('angularYeomanSassCompassApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+        .controller('MainCtrl', function($scope) {
+            $scope.links = [
+                {"text": "Home", "href": "/"},
+                {"text": "Firt steps", "href": "/first-steps"}
+            ];
+        });

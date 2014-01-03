@@ -12,6 +12,10 @@ angular.module('angularYeomanSassCompassApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/first-steps', {
+        templateUrl: 'views/first-steps.html',
+        controller: 'FirstStepsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
