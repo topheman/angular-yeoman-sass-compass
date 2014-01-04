@@ -1,18 +1,21 @@
-<h2>Home</h2>
-<p>The purpose of this project is to test AngularJS, with the other technologies I usually use, such as :</p>
-<ul>
-    <li>git</li>
-    <li>grunt</li>
-    <li>sass</li>
-</ul>
-<p>And some new ones (like following the yeoman workflow) :</p>
-<ul>
-    <li>yeoman</li>
-    <li>bower</li>
-    <li>karma</li>
-    <li>twitter bootstrap (yeah I've always prefered vanilla CSS) - also I apologize for all the unwanted markup that it needs ...</li>
-</ul>
-<h3>Summary <small>({{links.length}} links)</small></h3>
-<ul>
-    <li ng-repeat="link in links"><a ng-href="#{{link.href}}">{{link.text}}</a></li>
-</ul>
+<div id="main">
+    <h2>Home</h2>
+    <p>The purpose of this project is to test AngularJS, with the other technologies I usually use, such as :</p>
+    <ul>
+        <li>git</li>
+        <li>grunt</li>
+        <li>sass</li>
+    </ul>
+    <p>And some new ones (like following the yeoman workflow) :</p>
+    <ul>
+        <li>yeoman</li>
+        <li>bower</li>
+        <li>karma</li>
+        <li>twitter bootstrap (yeah I've always prefered vanilla CSS) - also I apologize for all the unwanted markup that it needs ...</li>
+    </ul>
+    <p>Source code can be found this <a href="https://github.com/topheman/angular-yeoman-sass-compass" title="github repo">github repo</a>.</p>
+    <h3>Summary <small>({{links.length}} links)</small></h3>
+    <ul>
+        <li ng-repeat="link in links"><a ng-href="#{{link.href}}">{{link.text}}</a></li>
+    </ul>
+</div>

@@ -1,17 +1,26 @@
-<h2>First steps</h2>
-<h3>Simple binding</h3>
-<form class="form-horizontal" role="form">
-    <div class="form-group">
-        <label class="col-xs-12 col-sm-3 control-label">Type anything</label>
-        <div class="col-xs-12 col-sm-7">
-            <input class="form-control" placeholder="Enter your name or whatever" ng-model="yourNameOrWhatever" ng-init="yourNameOrWhatever = ''">
+<div id="first-steps">
+    <h2>First steps</h2>
+    <p>A simple todo list</p>
+    <form class="form-horizontal" role="form" ng-submit="addTodo()">
+        <div class="form-group">
+            <label class="col-xs-12 col-sm-3 control-label">Type anything</label>
+            <div class="col-xs-12 col-sm-7">
+                <input class="form-control" placeholder="Enter something to do" ng-model="currentTodo" ng-init="currentTodo = ''">
+            </div>
+            <div class="col-xs-12 col-sm-1">
+                <button type="button" class="btn btn-default" ng-click="showTodo()">Show</button>
+            </div>
+            <div class="col-xs-12 col-sm-1">
+                <button type="button" class="btn btn-default" ng-click="addTodo()">Add</button>
+            </div>
+            <label class="col-xs-12 col-sm-3 control-label">It goes down here</label>
+            <div class="col-xs-12 col-sm-7">
+                <p class="help-block input-sm">{{currentTodo}}</p>
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-2">
-            <button type="button" class="btn btn-default" ng-click="showYourNameOrWhatever()">Show</button>
-        </div>
-        <label class="col-xs-12 col-sm-3 control-label">It goes down here</label>
-        <div class="col-xs-12 col-sm-7">
-            <p class="help-block">{{yourNameOrWhatever}}</p>
-        </div>
-    </div>
-</form>
+    </form>
+    <p ng-if="todos.length > 0" style="text-align: center;">{{todos.length}} task{{todos.length > 1 ? 's' : ''}}</p>
+    <ul class="list-group">
+        <li ng-repeat="todo in todos track by $index" class="list-group-item"><button type="button" class="close" aria-hidden="true" ng-click="remove($index)" title="Task done">&times;</button>{{todo}}</li>
+    </ul>
+</div>
