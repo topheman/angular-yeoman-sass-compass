@@ -25,9 +25,11 @@ describe('Controller: FirstStepsCtrl', function() {
         scope.$apply(function() {
             scope.currentTodo = "Test task";
         });
-        expect(scope.currentTodo).toBe("Test task");
-        scope.addTodo();
-        expect(scope.todos).toEqual(["Test task"]);
-        expect(scope.currentTodo).toBe("");
+        expect(scope.currentTodo).toBe('Test task');
+        scope.$apply(function(){
+            scope.addTodo();
+        });
+        expect(scope.todos).toEqual(['Test task']);
+        expect(scope.currentTodo).toBe('');
     });
 });
