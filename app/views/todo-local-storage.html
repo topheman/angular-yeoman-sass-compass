@@ -1,11 +1,18 @@
 <div id="todo-local-storage">
     <h2>Todo Local storage</h2>
-    <p>A simple todo list with local storage (the data will be persistent)</p>
+    <p>A simple todo list with local storage (the data will be persistent).</p>
+    <p>I'm using <a href="https://github.com/grevory/angular-local-storage" title="angular-local-storage">angular-local-storage</a> (can be installed via bower).</p>
+    <p>The code is the same as the <a ng-href="#/first-steps" title="First steps">previous step</a>, by using :</p>
+    <ul>
+        <li><code>$watch</code> and <code>$watchCollection</code> (to observe changes as well on the input and on the todo list)</li>
+        <li><code>localStorageService.add()</code> and <code>localStorageService.get()</code> which wil set and get values into th local storage (the service is init at bootstrap)</li>
+    </ul>
+    <p>Try to add somethings and reload the page, even, quit the browser, your data will be persistent.</p>
     <form class="form-horizontal" role="form" ng-submit="addTodo()">
         <div class="form-group">
             <label class="col-xs-12 col-sm-3 control-label">Type anything</label>
             <div class="col-xs-12 col-sm-6">
-                <input class="form-control" placeholder="Enter something to do" ng-model="currentTodo" ng-init="currentTodo = ''">
+                <input class="form-control" placeholder="Enter something to do" ng-model="currentTodo">
             </div>
             <div class="col-xs-6 col-sm-1 text-center">
                 <button type="button" class="btn btn-default" ng-click="showTodo()">Show</button>
