@@ -25,7 +25,7 @@ To use it you'll need :
 
 To init the site, in the project root directory :
 
-* npm install
-* bower install
+* `npm install`
+* `bower install`
 
 To run the site (more in the Gruntfile.js) : `grunt serve`

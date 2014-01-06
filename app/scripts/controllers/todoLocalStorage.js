@@ -13,11 +13,9 @@ angular.module('angularYeomanSassCompassApp')
                 
                 //then watch any changes and update the local storage
                 $scope.$watchCollection('todos',function(newValue,oldValue){
-                    console.log('todos',newValue,oldValue);
                     localStorageService.add('todoLocalStorage-todos',newValue);
                 });
                 $scope.$watch('currentTodo',function(value){
-                    console.log('currentTodo',value);
                     localStorageService.add('todoLocalStorage-currentTodo',value);
                 });
                 
