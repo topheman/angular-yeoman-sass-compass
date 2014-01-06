@@ -16,6 +16,10 @@ angular.module('angularYeomanSassCompassApp', [
         templateUrl: 'views/first-steps.html',
         controller: 'FirstStepsCtrl'
       })
+      .when('/todo-local-storage', {
+        templateUrl: 'views/todo-local-storage.html',
+        controller: 'TodoLocalStorageCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
