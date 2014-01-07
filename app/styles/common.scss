@@ -3,6 +3,11 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 $brand-primary : #900000;
 @import 'sass-bootstrap/lib/bootstrap';
 
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;

@@ -21,6 +21,10 @@ angular.module('angularYeomanSassCompassApp', [
                             templateUrl: 'views/todo-local-storage.html',
                             controller: 'TodoLocalStorageCtrl'
                         })
+                        .when('/github', {
+                            templateUrl: 'views/github.html',
+                            controller: 'GithubCtrl'
+                        })
                         .otherwise({
                             redirectTo: '/'
                         });
