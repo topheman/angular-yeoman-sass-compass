@@ -5,7 +5,8 @@ angular.module('angularYeomanSassCompassApp', [
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'githubModule'
 ])
         .config(['$routeProvider', 'localStorageServiceProvider', function($routeProvider, localStorageServiceProvider) {
                 $routeProvider

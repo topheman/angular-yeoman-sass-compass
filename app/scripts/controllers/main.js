@@ -6,6 +6,6 @@ angular.module('angularYeomanSassCompassApp')
                 {"text": "Home", "href": "/"},
                 {"text": "Firt steps", "href": "/first-steps"},
                 {"text": "Todo list with localStorage support", "href": "/todo-local-storage"},
-                {"text": "Github", "href": "/github"}
+                {"text": "Github service example", "href": "/github"}
             ];
         });
