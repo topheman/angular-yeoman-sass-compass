@@ -2,12 +2,14 @@
 'use strict';
 
 var helpers = {
-    initGithubUser : function(data, $scope){
-        $scope.githubUserFound = true;
+    initGithubUser : function(data, error, $scope){
+        $scope.githubUser = data;
+        $scope.error = error;
         console.log(data);
     },
-    resetGithubUser : function($scope){
-        $scope.githubUserFound = false;
+    resetGithubUser : function($scope, error){
+        $scope.githubUser = null;
+        $scope.error = typeof error === 'undefined' ? null : error;
     }
 };
 
@@ -24,14 +26,14 @@ angular.module('angularYeomanSassCompassApp')
                         githubService.getUserInfos(newValue)
                             .success(function(data){
                                 if(data.login !== ""){
-                                    helpers.initGithubUser(data,$scope);
+                                    helpers.initGithubUser(data, null, $scope);
                                 }
                                 else{
                                     helpers.resetGithubUser($scope);
                                 }
                             })
-                            .error(function(){
-                                helpers.resetGithubUser($scope);
+                            .error(function(error){
+                                helpers.resetGithubUser($scope, error);
                             });
                     },350);
                 }

@@ -7,7 +7,7 @@
             
         this.siteRoot = "https://api.github.com";
         
-        this.$get = ['$http',function($http){
+        this.$get = ['$http','$q',function($http,$q){
                 
             var siteRoot = this.siteRoot;
             
@@ -22,6 +22,17 @@
                 return $http({
                     method : 'GET',
                     url : siteRoot+'/users/'+username
+                });
+            };
+            
+            var getUserInfosAndRepos = function(username, success, error){
+                return $q.all([
+                    getUserInfos(username),
+                    getReposByUsername(username)
+                ]).then(function(results){
+                    
+                },function(error){
+                    
                 });
             };
             

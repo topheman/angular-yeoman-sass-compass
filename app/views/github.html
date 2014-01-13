@@ -8,7 +8,8 @@
             </div>
         </div>
     </form>
-    <div class="github-user-infos" ng-show="githubUserFound">
-        <h2>{{githubUsername}}</h2>
+    <div class="github-user-infos" ng-show="githubUser">
+        <h2><a href="{{githubUser.html_url}}" title="{{githubUser.login}} on github">{{githubUser.login}}</a></h2>
+        
     </div>
 </div>
