@@ -9,7 +9,6 @@
         </div>
     </form>
     <div class="github-user-infos" ng-show="githubUser">
-        <h2><a href="{{githubUser.html_url}}" title="{{githubUser.login}} on github">{{githubUser.login}}</a></h2>
-        
+        <a href="{{githubUser.html_url}}" title="{{githubUser.login}} on github" ng-show="githubUser.avatar_url"><img src="{{githubUser.avatar_url}}" alt="{{githubUser.login}} avatar"> {{githubUser.login}}</a>
     </div>
 </div>
