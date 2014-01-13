@@ -26,6 +26,10 @@ angular.module('angularYeomanSassCompassApp', [
                             templateUrl: 'views/github.html',
                             controller: 'GithubCtrl'
                         })
+                        .when('/github-user-and-repos', {
+                            templateUrl: 'views/github-user-and-repos.html',
+                            controller: 'GithubUserAndReposCtrl'
+                        })
                         .otherwise({
                             redirectTo: '/'
                         });

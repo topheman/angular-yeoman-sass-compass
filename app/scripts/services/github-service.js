@@ -26,19 +26,28 @@
             };
             
             var getUserInfosAndRepos = function(username, success, error){
-                return $q.all([
+                $q.all([
                     getUserInfos(username),
                     getReposByUsername(username)
                 ]).then(function(results){
-                    
-                },function(error){
-                    
+                    if(results && results.length === 2 && results[0].data.login !== ""){
+                        success({
+                            user : results[0].data,
+                            repos : results[1].data
+                        });
+                    }
+                    else{
+                        success(null);
+                    }
+                },function(e){
+                    error(e);
                 });
             };
             
             return {
                 getReposByUsername : getReposByUsername,
-                getUserInfos : getUserInfos
+                getUserInfos : getUserInfos,
+                getUserInfosAndRepos : getUserInfosAndRepos
             };
             
         }];
