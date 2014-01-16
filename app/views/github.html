@@ -4,11 +4,14 @@
         <div class="form-group">
             <label class="col-xs-12 col-sm-3 control-label">Type github username</label>
             <div class="col-xs-12 col-sm-9">
-                <input class="form-control" placeholder="Enter a github username ..." ng-model="githubUsername" type="search" ng-init="githubUsername = 'topheman'">
+                <input class="form-control" placeholder="Enter a github username ..." ng-model="githubUsername" type="search">
             </div>
         </div>
     </form>
     <div class="github-user-infos" ng-show="githubUser">
         <a href="{{githubUser.html_url}}" title="{{githubUser.login}} on github" ng-show="githubUser.avatar_url"><img src="{{githubUser.avatar_url}}" alt="{{githubUser.login}} avatar"> {{githubUser.login}}</a>
+    </div>
+    <div class="github-error" ng-show="error">
+        {{error.message}}
     </div>
 </div>

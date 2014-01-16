@@ -9,7 +9,7 @@ var helpers = {
     },
     resetGithubUser : function($scope, error){
         $scope.githubUser = null;
-        $scope.error = typeof error === 'undefined' ? null : error;
+        $scope.error = typeof error === 'undefined' ? null : (error.message ? error : error.data ? error.data : null);
     }
 };
 

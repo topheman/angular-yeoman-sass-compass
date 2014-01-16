@@ -11,7 +11,8 @@ var helpers = {
     resetGithubUserAndRepos : function($scope, error){
         $scope.githubUser = null;
         $scope.githubRepos = null;
-        $scope.error = typeof error === 'undefined' ? null : error;
+        $scope.error = typeof error === 'undefined' ? null : (error.message ? error : error.data ? error.data : null);
+        console.log($scope.error);
     }
 };
 
