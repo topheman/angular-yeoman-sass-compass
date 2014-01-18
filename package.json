@@ -40,7 +40,8 @@
     "karma-coffee-preprocessor": "~0.1.2",
     "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.9",
-    "karma-ng-html2js-preprocessor": "~0.1.0"
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "grunt-replace": "~0.5.1"
   },
   "engines": {
     "node": ">=0.8.0"
@@ -48,8 +49,8 @@
   "scripts": {
     "test": "grunt test"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/topheman/angular-yeoman-sass-compass.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/topheman/angular-yeoman-sass-compass.git"
   }
 }
